@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Noor — Hijabs, hand finished</title>
+  <meta name="description" content="Noor is a hijab atelier: silk, chiffon, cotton and jersey drapes, hand-finished in small batches. A front-end prototype store — no real payments.">
+  <meta name="theme-color" content="#FBF6EE">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23FBF6EE'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' text-anchor='middle' fill='%23B08A4F'%3EN%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="announce">
+    <div class="container announce__inner">
+      <span>Free shipping over <span data-free-ship>$75.00</span></span>
+      <span class="announce__dot">·</span>
+      <span>30-day returns</span>
+      <span class="announce__dot">·</span>
+      <span>Hand-finished in London</span>
+      <span class="announce__tag">Demo store</span>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <button class="icon-btn header__menu" type="button" data-action="open-nav" aria-label="Open menu">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+
+      <a class="brand" href="#/" aria-label="Noor home">
+        <span class="brand__name">Noor</span>
+        <span class="brand__sub">Hijab Atelier</span>
+      </a>
+
+      <nav class="nav" aria-label="Main">
+        <a href="#/shop" data-nav="/shop">Shop</a>
+        <div class="nav__drop">
+          <button class="nav__drop-btn" type="button">Collections
+            <svg class="icon icon--xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="nav__menu" role="menu">
+            <a href="#/shop" role="menuitem">All pieces</a>
+            <a href="#/shop?collection=essentials" role="menuitem">Everyday Essentials</a>
+            <a href="#/shop?collection=silk" role="menuitem">Silk &amp; Satin</a>
+            <a href="#/shop?collection=chiffon" role="menuitem">Chiffon Luxe</a>
+            <a href="#/shop?collection=printed" role="menuitem">Printed &amp; Patterned</a>
+            <a href="#/shop?collection=bridal" role="menuitem">Bridal &amp; Occasion</a>
+            <a href="#/shop?collection=instant" role="menuitem">Instant &amp; Pre-Styled</a>
+          </div>
+        </div>
+        <a href="#/shop?collection=bridal" data-nav="/shop?collection=bridal">Bridal</a>
+        <a href="#/about" data-nav="/about">Our story</a>
+      </nav>
+
+      <div class="header__actions">
+        <label class="currency">
+          <span class="sr-only">Currency</span>
+          <select id="currency-select" aria-label="Currency">
+            <option value="USD">USD $</option>
+            <option value="GBP">GBP £</option>
+            <option value="EUR">EUR €</option>
+          </select>
+        </label>
+        <button class="icon-btn" type="button" data-action="open-search" aria-label="Search">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.4"/><path d="M16 16l4 4"/></svg>
+        </button>
+        <a class="icon-btn" href="#/wishlist" aria-label="Wishlist">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.2S4 15.4 4 9.9A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8 2.9c0 5.5-8 10.3-8 10.3z"/></svg>
+          <span class="count is-empty" data-wish-count>0</span>
+        </a>
+        <button class="icon-btn" type="button" data-action="open-cart" aria-label="Open bag">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.2 8h11.6l-1.1 12H7.3L6.2 8z"/><path d="M9.2 8V6.4a2.8 2.8 0 0 1 5.6 0V8"/></svg>
+          <span class="count is-empty" data-cart-count>0</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="search-panel" id="search-panel" hidden aria-hidden="true">
+      <div class="container">
+        <form class="search-panel__form" data-form="search" role="search">
+          <svg class="icon search-panel__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.4"/><path d="M16 16l4 4"/></svg>
+          <label class="sr-only" for="global-search">Search products</label>
+          <input id="global-search" name="q" type="search" placeholder="Search silk, chiffon, ivory, bridal…" autocomplete="off">
+          <button class="btn btn--ink btn--sm" type="submit">Search</button>
+          <button class="icon-btn" type="button" data-action="close-search" aria-label="Close search">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+        </form>
+        <div class="search-panel__hints">
+          <span>Popular</span>
+          <button type="button" data-action="search-term" data-term="silk">silk</button>
+          <button type="button" data-action="search-term" data-term="chiffon">chiffon</button>
+          <button type="button" data-action="search-term" data-term="ivory">ivory</button>
+          <button type="button" data-action="search-term" data-term="bridal">bridal</button>
+          <button type="button" data-action="search-term" data-term="jersey">jersey</button>
+          <button type="button" data-action="search-term" data-term="instant">instant</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1"></main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="brand brand--footer" href="#/">
+          <span class="brand__name">Noor</span>
+          <span class="brand__sub">Hijab Atelier</span>
+        </a>
+        <p>Silk, chiffon and jersey drapes, cut and finished by hand in small batches. Made to be worn, not saved for best.</p>
+        <div class="footer__pays"><span>VISA</span><span>Mastercard</span><span>Amex</span><span>Apple Pay</span></div>
+      </div>
+      <div class="footer__col">
+        <h3>Shop</h3>
+        <a href="#/shop">All pieces</a>
+        <a href="#/shop?collection=essentials">Everyday essentials</a>
+        <a href="#/shop?collection=silk">Silk &amp; satin</a>
+        <a href="#/shop?collection=chiffon">Chiffon luxe</a>
+        <a href="#/shop?collection=bridal">Bridal &amp; occasion</a>
+        <a href="#/shop?collection=instant">Instant &amp; pre-styled</a>
+      </div>
+      <div class="footer__col">
+        <h3>Help</h3>
+        <a href="#/about">Our story</a>
+        <a href="#/about">Shipping &amp; returns</a>
+        <a href="#/about">Fabric care</a>
+        <a href="#/orders">Order history</a>
+        <a href="#/wishlist">Wishlist</a>
+        <a href="#/admin">Studio (staff)</a>
+      </div>
+      <div class="footer__col footer__col--wide">
+        <h3>Keep in touch</h3>
+        <p>One email a fortnight: new colourways, restocks and styling notes.</p>
+        <form class="newsletter__form newsletter__form--footer" data-form="newsletter" novalidate>
+          <label class="sr-only" for="footer-email">Email address</label>
+          <input id="footer-email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
+          <button class="btn btn--ink btn--sm" type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2026 Noor Atelier. A front-end prototype — payments, stock and shipping are simulated.</p>
+      <p>Data is stored in your browser only. <button class="link-btn" type="button" onclick="window.Nooor && window.Nooor.app && window.Nooor.app.toast('Everything stays in this browser. Nothing is uploaded.')">Privacy</button></p>
+    </div>
+  </footer>
+
+  <!-- overlays -->
+  <div class="scrim" id="scrim" hidden></div>
+
+  <aside class="drawer drawer--cart" id="cart-drawer" hidden aria-hidden="true" aria-label="Shopping bag">
+    <header class="drawer__head">
+      <h2>Your bag</h2>
+      <button class="icon-btn" type="button" data-action="close-cart" aria-label="Close bag">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+    <div class="drawer__body" id="cart-drawer-body"></div>
+  </aside>
+
+  <aside class="drawer drawer--nav" id="nav-drawer" hidden aria-hidden="true" aria-label="Menu">
+    <header class="drawer__head">
+      <h2>Menu</h2>
+      <button class="icon-btn" type="button" data-action="close-nav" aria-label="Close menu">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+    <nav class="drawer__nav" aria-label="Mobile">
+      <a href="#/shop" data-action="close-nav">Shop all</a>
+      <a href="#/shop?collection=essentials" data-action="close-nav">Everyday Essentials</a>
+      <a href="#/shop?collection=silk" data-action="close-nav">Silk &amp; Satin</a>
+      <a href="#/shop?collection=chiffon" data-action="close-nav">Chiffon Luxe</a>
+      <a href="#/shop?collection=printed" data-action="close-nav">Printed &amp; Patterned</a>
+      <a href="#/shop?collection=bridal" data-action="close-nav">Bridal &amp; Occasion</a>
+      <a href="#/shop?collection=instant" data-action="close-nav">Instant &amp; Pre-Styled</a>
+      <hr>
+      <a href="#/about" data-action="close-nav">Our story</a>
+      <a href="#/wishlist" data-action="close-nav">Wishlist</a>
+      <a href="#/orders" data-action="close-nav">Orders</a>
+      <a href="#/admin" data-action="close-nav">Studio (staff)</a>
+    </nav>
+    <div class="drawer__foot-simple">
+      <p>Free shipping over <span data-free-ship>$75.00</span> · 30-day returns</p>
+    </div>
+  </aside>
+
+  <div class="modal-root" id="modal-root" hidden></div>
+  <div class="toast-region" id="toast-region" aria-live="polite"></div>
+
+  <template id="color-row-template">
+    <div class="color-row" data-color-row>
+      <input name="colorName" placeholder="Colour name" aria-label="Colour name">
+      <input type="color" name="colorHex" value="#D8C3A5" aria-label="Colour swatch">
+      <select name="colorFamily" aria-label="Colour family">
+        <option>Neutral</option><option>Black</option><option>Pink</option><option>Blue</option>
+        <option>Green</option><option>Red</option><option>Purple</option><option>Metallic</option><option>Grey</option>
+      </select>
+      <button type="button" class="icon-btn" data-action="remove-color" aria-label="Remove colour">×</button>
+    </div>
+  </template>
+
+  <noscript>
+    <div style="padding:2rem;text-align:center;font-family:system-ui">
+      Noor is a JavaScript prototype — please enable JavaScript to browse the store.
+    </div>
+  </noscript>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/art.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/views.js"></script>
+  <script src="assets/js/checkout.js"></script>
+  <script src="assets/js/admin.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

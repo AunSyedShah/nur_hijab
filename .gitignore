@@ -1,0 +1,13 @@
+# OS clutter
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# local scratch / test artifacts
+_shots/
+_smoke.*
+_shot.*
+_diag.*
+_art*.html
+_frame.html
+_pay.html
